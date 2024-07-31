@@ -1,0 +1,13 @@
+name: sentenciador
+
+services:
+  sentenciador_app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENVIRONMENT=development
+      - MODULE_NAME=app.main
+      - PORT=8000
